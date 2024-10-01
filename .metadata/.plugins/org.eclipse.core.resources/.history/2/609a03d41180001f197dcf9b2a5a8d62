@@ -1,0 +1,28 @@
+package com.shyam.excel.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.shyam.excel.entity.Student;
+import com.shyam.excel.repo.StudentRepository;
+
+import jakarta.annotation.PostConstruct;
+
+@Service
+public class StudentService {
+
+	@Autowired
+	private StudentRepository studentRepository;
+	
+	@PostConstruct
+	public void saveStudent() {
+		List<Student> list = List.of(
+				new Student("shyam", "CS", "Axis", 3432),
+				new Student("sangam", "CS", "Axis", 3432),
+				new Student("Navaya", "CS", "Axis", 3432));
+
+		studentRepository.saveAll(list);
+	}
+}

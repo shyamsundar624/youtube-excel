@@ -1,0 +1,10 @@
+package com.shyam.excel.repo;
+
+import org.hibernate.type.descriptor.converter.spi.JpaAttributeConverter;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.shyam.excel.entity.Student;
+
+public interface StudentRepository extends JpaRepository<Student,Long>{
+
+}

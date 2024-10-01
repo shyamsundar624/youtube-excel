@@ -1,0 +1,5 @@
+package com.shyam.excel.repo;
+
+public interface StudentRepository {
+
+}

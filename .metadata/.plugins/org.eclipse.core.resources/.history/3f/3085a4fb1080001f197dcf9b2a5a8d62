@@ -1,0 +1,10 @@
+package com.shyam.excel.entity;
+
+public class Student {
+
+	private Long id;
+	private String name;
+	private String branch;
+	private String college;
+	private double fees;
+}
